@@ -7,10 +7,14 @@ LABEL com.github.containers.toolbox="true" \
       summary="Basic Fedora Toolbox image." \
       maintainer="faeizmahrus@outlook.com"
 
-# Run distrobox shim script
+# Copy scripts
 COPY ../scripts/distrobox-shims.sh /
+COPY ../scripts/basebox-fedora.sh /
+
+
+# Run scripts
+RUN chmod +x /basebox-fedora.sh && /basebox-fedora.sh
 RUN chmod +x /distrobox-shims.sh && /distrobox-shims.sh
 
-# Run setup script
-COPY ../scripts/basebox-fedora.sh /
-RUN chmod +x /basebox-fedora.sh && /basebox-fedora.sh
+# Remove scripts
+RUN rm -rf /basebox-fedora.sh /distrobox-shims.sh
