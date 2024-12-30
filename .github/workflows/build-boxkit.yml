@@ -7,6 +7,9 @@ on:
   merge_group:    
   schedule:
     - cron: '0 0 * * TUE'
+  push:
+    paths-ignore:
+      - "**.md" # don't rebuild on documentation changes
 
 env:
     IMAGE_TAGS: latest
