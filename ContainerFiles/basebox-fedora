@@ -14,7 +14,7 @@ COPY ../scripts/basebox-fedora.sh /
 
 # Run scripts
 RUN chmod +x /basebox-fedora.sh && /basebox-fedora.sh
-RUN chmod +x /distrobox-shims.sh && /distrobox-shims.sh
+#RUN chmod +x /distrobox-shims.sh && /distrobox-shims.sh
 
 # Remove scripts
 RUN rm -rf /basebox-fedora.sh /distrobox-shims.sh

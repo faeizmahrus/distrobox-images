@@ -27,5 +27,5 @@ dnf config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.
 dnf config-manager addrepo --from-repofile=https://packages.microsoft.com/yumrepos/vscode/config.repo
 
 # COPRs
-dnf copr enable alxhr0/Obsidian 
-dnf copr enable mozes/zotero7
+dnf copr enable -y alxhr0/Obsidian 
+dnf copr enable -y mozes/zotero7
