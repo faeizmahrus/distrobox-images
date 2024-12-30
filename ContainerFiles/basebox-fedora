@@ -1,0 +1,16 @@
+# Select image to build off of
+FROM quay.io/fedora/fedora-toolbox
+
+# Metadata stuff
+LABEL com.github.containers.toolbox="true" \
+      usage="This image is meant to be used with the distrobox command." \
+      summary="Basic Fedora Toolbox image." \
+      maintainer="faeizmahrus@outlook.com"
+
+# Run distrobox shim script
+COPY ../scripts/distrobox-shims.sh /
+RUN chmod +x /distrobox-shims.sh && /distrobox-shims.sh
+
+# Run setup script
+COPY ../scripts/basebox-fedora.sh /
+RUN chmod +x /basebox-fedora.sh && /basebox-fedora.sh
