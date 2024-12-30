@@ -1,10 +1,10 @@
 name: build-boxkit
 on:
   workflow_dispatch: # allow manually triggering builds
+  merge_group:    
   pull_request:
     branches:
       - main
-  merge_group:    
   schedule:
     - cron: '0 0 * * TUE'
   push:
