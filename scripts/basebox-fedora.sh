@@ -9,15 +9,15 @@ echo "timeout = 5" >> /etc/dnf/dnf.conf
 dnf update -y
 dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
                 https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-dnf swap -y "rpmfusion-free-release-$(rpm -E %fedora)" rpmfusion-free-release
-dnf swap -y "rpmfusion-nonfree-release-$(rpm -E %fedora)" rpmfusion-nonfree-release
+dnf swap -y "rpmfusion-free-release-$(rpm -E %fedora)" rpmfusion-free-release --allowerasing
+dnf swap -y "rpmfusion-nonfree-release-$(rpm -E %fedora)" rpmfusion-nonfree-release --allowerasing
 dnf install -y rpmfusion-free-release-tainted rpmfusion-nonfree-release-tainted
 dnf config-manager setopt fedora-cisco-openh264.enabled=1
 
 # Install drivers and stuff
 dnf install -y ffmpeg intel-media-driver libva-intel-driver intel-compute-runtime clinfo
-dnf swap -y mesa-va-drivers mesa-va-drivers-freeworld
-dnf swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
+dnf swap -y mesa-va-drivers mesa-va-drivers-freeworld --allowerasing
+dnf swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld --allowerasing
 dnf install -y dnf-plugins-core
 
 # Add other repos
