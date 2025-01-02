@@ -25,6 +25,8 @@ dnf install -y dnf-plugins-core
 dnf config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 # VS Code
 dnf config-manager addrepo --from-repofile=https://packages.microsoft.com/yumrepos/vscode/config.repo
+# WineHQ repos
+dnf5 config-manager addrepo --from-repofile=https://dl.winehq.org/wine-builds/fedora/41/winehq.repo
 
 # COPRs
 dnf copr enable -y alxhr0/Obsidian 
