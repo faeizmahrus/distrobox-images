@@ -31,3 +31,6 @@ dnf5 config-manager addrepo --from-repofile=https://dl.winehq.org/wine-builds/fe
 # COPRs
 dnf copr enable -y alxhr0/Obsidian 
 dnf copr enable -y mozes/zotero7
+
+# Install essentials
+dnf install -y fish zsh helix
