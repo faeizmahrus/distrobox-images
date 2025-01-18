@@ -4,16 +4,13 @@ FROM ghcr.io/faeizmahrus/basebox-debian
 # Metadata stuff
 LABEL com.github.containers.toolbox="true" \
       usage="This image is meant to be used with the distrobox command." \
-      summary="Basic debian Toolbox image." \
+      summary="Debian distrobox image with VSCode, Obsidian and OnlyOffice preinstalled, use appbox-export." \
       maintainer="faeizmahrus@outlook.com"
 
 # Copy scripts
-COPY ../scripts/distrobox-shims.sh /
 COPY ../scripts/appbox-debian.sh /
+COPY ../scripts/appbox-export /usr/bin/
+RUN chmod +x /usr/bin/appbox-export
 
 # Run scripts
 RUN chmod +x /appbox-debian.sh && /appbox-debian.sh
-#RUN chmod +x /distrobox-shims.sh && /distrobox-shims.sh
-
-# Remove scripts
-RUN rm -rf /appbox-debian.sh /distrobox-shims.sh

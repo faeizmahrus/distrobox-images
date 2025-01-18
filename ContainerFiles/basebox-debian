@@ -4,13 +4,14 @@ FROM docker.io/library/debian
 # Metadata stuff
 LABEL com.github.containers.toolbox="true" \
       usage="This image is meant to be used with the distrobox command." \
-      summary="Basic debian Toolbox image." \
+      summary="Basic debian distrobox image." \
       maintainer="faeizmahrus@outlook.com"
 
 # Copy scripts
 COPY ../scripts/distrobox-shims.sh /
 COPY ../scripts/basebox-debian.sh /
 COPY ../scripts/distrobox-export-electron /usr/bin/
+RUN chmod +x /usr/bin/distrobox-export-electron
 
 # Run scripts
 RUN chmod +x /basebox-debian.sh && /basebox-debian.sh

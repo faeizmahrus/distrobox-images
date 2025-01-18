@@ -4,13 +4,14 @@ FROM quay.io/fedora/fedora-toolbox
 # Metadata stuff
 LABEL com.github.containers.toolbox="true" \
       usage="This image is meant to be used with the distrobox command." \
-      summary="Basic Fedora Toolbox image." \
+      summary="Basic Fedora distrobox image." \
       maintainer="faeizmahrus@outlook.com"
 
 # Copy scripts
 COPY ../scripts/distrobox-shims.sh /
 COPY ../scripts/basebox-fedora.sh /
 COPY ../scripts/distrobox-export-electron /usr/bin/
+RUN chmod +x /usr/bin/distrobox-export-electron
 
 # Run scripts
 RUN chmod +x /basebox-fedora.sh && /basebox-fedora.sh

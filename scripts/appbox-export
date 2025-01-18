@@ -1,0 +1,5 @@
+#!/bin/bash
+
+distrobox-export-electron code
+distrobox-export-electron obsidian
+distrobox-export-electron onlyoffice-desktopeditors
