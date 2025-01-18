@@ -1,20 +1,20 @@
 # Select image to build off of
-FROM quay.io/toolbx/arch-toolbox
+FROM ghcr.io/faeizmahrus/basebox-debian
 
 # Metadata stuff
 LABEL com.github.containers.toolbox="true" \
       usage="This image is meant to be used with the distrobox command." \
-      summary="Basic Arch Toolbox image." \
+      summary="Basic debian Toolbox image." \
       maintainer="faeizmahrus@outlook.com"
 
 # Copy scripts
 COPY ../scripts/distrobox-shims.sh /
-COPY ../scripts/basebox-arch.sh /
+COPY ../scripts/appbox-debian.sh /
 
 
 # Run scripts
-RUN chmod +x /basebox-arch.sh && /basebox-arch.sh
+RUN chmod +x /appbox-debian.sh && /appbox-debian.sh
 #RUN chmod +x /distrobox-shims.sh && /distrobox-shims.sh
 
 # Remove scripts
-RUN rm -rf /basebox-arch.sh /distrobox-shims.sh
+RUN rm -rf /appbox-debian.sh /distrobox-shims.sh

@@ -1,20 +1,20 @@
 # Select image to build off of
-FROM quay.io/fedora/fedora-toolbox
+FROM docker.io/library/debian
 
 # Metadata stuff
 LABEL com.github.containers.toolbox="true" \
       usage="This image is meant to be used with the distrobox command." \
-      summary="Basic Fedora Toolbox image." \
+      summary="Basic debian Toolbox image." \
       maintainer="faeizmahrus@outlook.com"
 
 # Copy scripts
 COPY ../scripts/distrobox-shims.sh /
-COPY ../scripts/basebox-fedora.sh /
+COPY ../scripts/basebox-debian.sh /
 COPY ../scripts/distrobox-export-electron /usr/bin/
 
 # Run scripts
-RUN chmod +x /basebox-fedora.sh && /basebox-fedora.sh
+RUN chmod +x /basebox-debian.sh && /basebox-debian.sh
 #RUN chmod +x /distrobox-shims.sh && /distrobox-shims.sh
 
 # Remove scripts
-RUN rm -rf /basebox-fedora.sh /distrobox-shims.sh
+RUN rm -rf /basebox-debian.sh /distrobox-shims.sh

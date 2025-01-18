@@ -1,0 +1,3 @@
+#!/bin/bash
+
+distrobox-export -a "$1" -ef '--ozone-platform-hint=auto --enable-wayland-ime'
