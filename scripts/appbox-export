@@ -2,4 +2,4 @@
 
 distrobox-export-electron code
 distrobox-export-electron obsidian
-distrobox-export-electron onlyoffice-desktopeditors
+distrobox-export -a onlyoffice-desktopeditors -ef '--xdg-desktop-portal'
