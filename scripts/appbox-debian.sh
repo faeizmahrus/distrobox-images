@@ -25,4 +25,4 @@ touch /usr/bin/appbox-export && chmod +x /usr/bin/appbox-export && \
 echo '#!/bin/bash' >> /usr/bin/distrobox-export-all && \
 echo 'distrobox-export-electron code' >> /usr/bin/distrobox-export-all && \
 echo 'distrobox-export-electron obsidian' >> /usr/bin/distrobox-export-all && \
-echo 'distrobox-export-electron onlyoffice-desktopeditors' >> /usr/bin/distrobox-export-all && \
+echo 'distrobox-export-electron onlyoffice-desktopeditors' >> /usr/bin/distrobox-export-all
