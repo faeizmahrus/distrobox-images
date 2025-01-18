@@ -9,15 +9,15 @@ curl -L -o 'onlyoffice-x64.deb' 'https://download.onlyoffice.com/install/desktop
 apt update && apt upgrade -y
 
 # Install VSCode
-apt install -y vscode-x64.deb
+apt install -y ./vscode-x64.deb
 apt install -y git
 
 # Install Obsidian and install extras
-apt install -y obsidian-x64.deb
+apt install -y ./obsidian-x64.deb
 apt install -y pandoc texlive
 
 # Install OnlyOffice
-apt install -y onlyoffice-x64.deb
+apt install -y ./onlyoffice-x64.deb
 apt install -y ttf-mscorefonts-installer
 
 # Create installer script
