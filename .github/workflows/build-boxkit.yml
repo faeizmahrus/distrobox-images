@@ -28,6 +28,8 @@ jobs:
       matrix:
         containerfile:
           - basebox-fedora
+          - basebox-debian
+          - appbox-debian
     steps:
       # Checkout push-to-registry action GitHub repository
       - name: Checkout Push to Registry action
