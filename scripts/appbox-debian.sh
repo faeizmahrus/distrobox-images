@@ -20,12 +20,5 @@ apt install -y pandoc texlive
 apt install -y ./onlyoffice-x64.deb
 apt install -y ttf-mscorefonts-installer
 
-# Create installer script
-touch /usr/bin/appbox-export && chmod +x /usr/bin/appbox-export && \
-echo '#!/bin/bash' >> /usr/bin/distrobox-export-all && \
-echo 'distrobox-export-electron code' >> /usr/bin/distrobox-export-all && \
-echo 'distrobox-export-electron obsidian' >> /usr/bin/distrobox-export-all && \
-echo 'distrobox-export-electron onlyoffice-desktopeditors' >> /usr/bin/distrobox-export-all
-
 # Clean .deb packages
 rm -rf ./*.deb
