@@ -22,3 +22,6 @@ apt install -y ttf-mscorefonts-installer
 
 # Clean .deb packages
 rm -rf ./*.deb
+
+# Fix Bangla input
+sed -i '/UTF-8/s/^#//' /etc/locale.gen && locale-gen

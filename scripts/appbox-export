@@ -2,4 +2,4 @@
 
 distrobox-export-electron code
 distrobox-export-electron obsidian
-distrobox-export -a onlyoffice-desktopeditors -ef '--xdg-desktop-portal'
+distrobox-export -a onlyoffice-desktopeditors -ef '--xdg-desktop-portal' -nf '--env GTK_IM_MODULE=xim'
