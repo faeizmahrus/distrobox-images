@@ -7,6 +7,7 @@ curl -L -o 'onlyoffice-x64.deb' 'https://download.onlyoffice.com/install/desktop
 
 # Update apt
 apt update && apt upgrade -y
+apt install -y locales
 
 # Install VSCode
 apt install -y ./vscode-x64.deb
